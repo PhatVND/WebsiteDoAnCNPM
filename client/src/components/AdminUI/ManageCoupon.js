@@ -17,7 +17,7 @@ const ManageCoupon = () => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false);
   const [deleteCouponId, setDeleteCouponId] = useState(null);
-  const API_URL = "http://localhost:8000/coupons";
+  const API_URL = https://pleasework-h79r.onrender.com/coupons";
 
   useEffect(() => {
     // Fetch coupons on component mount
