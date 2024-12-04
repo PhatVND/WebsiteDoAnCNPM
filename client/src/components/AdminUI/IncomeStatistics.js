@@ -20,7 +20,7 @@ const IncomeStatistics = () => {
   // Hàm gọi API lấy danh sách nhân viên có vai trò là 'staff'
   const fetchStaffUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/user/admin/staff");
+      const response = await axios.get("https://pleasework-h79r.onrender.com/user/admin/staff");
       setStaffUsers(response.data.staff);
     } catch (error) {
       console.error("Error fetching staff users:", error);
