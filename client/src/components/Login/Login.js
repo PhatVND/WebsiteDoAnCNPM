@@ -25,7 +25,7 @@ const Login = () => {
     try {
       if (isForgotPassword) {
         // Send OTP
-        const response = await axios.post("http://localhost:8000/forgot-password", { email });
+        const response = await axios.post("https://food-canteen.onrender.com/forgot-password", { email });
         if (response.status === 200) {
           alert("OTP has been sent to your email!");
           setIsForgotPassword(false);
@@ -37,7 +37,7 @@ const Login = () => {
           setMessage("Passwords do not match!");
           return;
         }
-        const response = await axios.post("http://localhost:8000/reset-password", {
+        const response = await axios.post("https://food-canteen.onrender.com/reset-password", {
           email,
           otp: resetToken,
           newPassword,
@@ -48,7 +48,7 @@ const Login = () => {
         }
       } else if (isRegister) {
         // Register new user
-        const response = await axios.post("http://localhost:8000/register", {
+        const response = await axios.post("https://food-canteen.onrender.com/register", {
           username,
           password,
           name, // Include name in the request
@@ -62,7 +62,7 @@ const Login = () => {
         }
       } else {
         // Login
-        const response = await axios.post("http://localhost:8000/login", {
+        const response = await axios.post("https://food-canteen.onrender.com/login", {
           username,
           password,
           role,
